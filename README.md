@@ -1,4 +1,4 @@
-Wealth Sense AI
+# Wealth Sense AI
 ![Image](https://github.com/user-attachments/assets/7eee6e5d-8c38-4195-8f9d-3894ee70cf87)
 ![Image](https://github.com/user-attachments/assets/fa720633-5fbc-4d87-b85c-264ee6cd7628)
 ![Image](https://github.com/user-attachments/assets/967d3126-fc32-4abd-a7a4-1e9728bb1a49)
