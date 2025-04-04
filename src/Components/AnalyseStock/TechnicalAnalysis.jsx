@@ -92,7 +92,7 @@ const TechnicalAnalysis = ({ symbol }) => {
             <Tooltip />
             <Bar 
               dataKey="volume" 
-              fill={theme === 'dark' ? '#374151' : '#e5e7eb'} 
+              fill={theme === 'dark' ? '#374151' : '#BDBDBD'} 
               yAxisId="right"
               opacity={0.5}
             />
