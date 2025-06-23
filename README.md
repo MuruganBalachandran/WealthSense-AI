@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 # WealthSense: Full-Stack AI-Powered Stock Analysis Platform
+=======
+# Wealth Sense AI
+![Image](https://github.com/user-attachments/assets/7eee6e5d-8c38-4195-8f9d-3894ee70cf87)
+![Image](https://github.com/user-attachments/assets/fa720633-5fbc-4d87-b85c-264ee6cd7628)
+![Image](https://github.com/user-attachments/assets/967d3126-fc32-4abd-a7a4-1e9728bb1a49)
+# Getting Started with Create React App
+>>>>>>> 4360ed0f11dd13855f6fa53e541890b9a8e11a2d
 
 ## Overview
 WealthSense is a comprehensive platform for advanced stock analysis, portfolio management, and personalized financial insights. It consists of three main components:
