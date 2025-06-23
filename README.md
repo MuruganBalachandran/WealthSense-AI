@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# WealthSense: Full-Stack AI-Powered Stock Analysis Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+WealthSense is a comprehensive platform for advanced stock analysis, portfolio management, and personalized financial insights. It consists of three main components:
+- **OLLAMA (AI/Agents)**: Python-based AI agentic orchestrator for deep stock analysis using CrewAI, LangChain, and Ollama models.
+- **Client**: Modern React web app for user interaction, visualization, and portfolio management.
+- **Server**: Node.js/Express backend for authentication, user management, and API integration with MongoDB.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Project Structure
+```
+wealthsense/
+│
+├── client/         # React frontend
+│   └── OLLAMA/     # Python AI agent orchestrator (CrewAI, LangChain, Ollama)
+├── server/         # Node.js/Express backend
+└── README.md       # (this file)
+```
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 1. OLLAMA (AI/Agents)
+- **Location:** `client/OLLAMA/`
+- **Purpose:** Advanced stock analysis using multiple AI agents (technical, fundamental, sentiment, risk, etc.)
+- **Tech:** Python, CrewAI, LangChain, Ollama, yfinance, TA-Lib, Plotly, Streamlit
+- **How to Run:**
+  1. Set up a Python environment (recommended: venv or conda)
+  2. Install dependencies:
+     ```bash
+     cd client/OLLAMA
+     pip install -r requirements.txt
+     ```
+  3. Run the Streamlit dashboard:
+     ```bash
+     streamlit run app.py
+     ```
+  4. See `client/OLLAMA/README.md` for full details and architecture.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 2. Client (React Frontend)
+- **Location:** `client/`
+- **Purpose:** User interface for login, signup, profile, watchlist, settings, and stock analysis
+- **Tech:** React, Context API, modern CSS, REST API integration
+- **How to Run:**
+  1. Install dependencies:
+     ```bash
+     cd client
+     npm install
+     ```
+  2. Start the development server:
+     ```bash
+     npm start
+     ```
+  3. The app runs at [http://localhost:3000](http://localhost:3000)
+  4. See `client/README.md` for more details.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 3. Server (Node.js/Express Backend)
+- **Location:** `server/`
+- **Purpose:** Handles authentication, user CRUD, watchlist, settings, and MongoDB integration
+- **Tech:** Node.js, Express, Mongoose, JWT, dotenv
+- **How to Run:**
+  1. Install dependencies:
+     ```bash
+     cd server
+     npm install
+     ```
+  2. Create a `.env` file in `server/` with:
+     ```
+     MONGO_URI=your_mongodb_connection_string
+     JWT_SECRET=your_jwt_secret
+     PORT=5000
+     ```
+  3. Start the server:
+     ```bash
+     npm start
+     ```
+  4. The API runs at [http://localhost:5000/api](http://localhost:5000/api)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Integration
+- The client communicates with the server via REST APIs for authentication, profile, watchlist, and settings.
+- The OLLAMA AI agent orchestrator can be integrated with the client or used standalone for advanced analysis.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## License
+See the LICENSE file for details.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For more details on each part, see the respective `README.md` files in `client/`, `client/OLLAMA/`, and `server/`.
